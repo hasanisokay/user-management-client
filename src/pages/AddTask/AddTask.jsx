@@ -9,7 +9,7 @@ const AddTask = () => {
         const description = form.description.value
         const status = form.status.value
         const newTask = {title, description, status}
-        fetch(`http://localhost:5000/addTask`,{
+        fetch(`https://user-management-server-six.vercel.app/addTask`,{
             method: "POST",
             headers: {"content-type":"application/json"},
             body: JSON.stringify(newTask)

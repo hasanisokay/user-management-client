@@ -12,7 +12,7 @@ const UpdateTask = () => {
 
     }
     useEffect(()=>{
-        fetch(`http://localhost:5000/task/${id}`)
+        fetch(`https://user-management-server-six.vercel.app/task/${id}`)
         .then(res=>res.json())
         .then(data=>{
             setTask(data)            

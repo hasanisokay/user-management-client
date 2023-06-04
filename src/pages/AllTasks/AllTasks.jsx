@@ -6,7 +6,7 @@ const AllTasks = () => {
     const [allTasks, setAllTasks] = useState([])
     const navigate = useNavigate()
     const handleChangeTask = (task) => {
-        fetch(`http://localhost:5000/updateStatus/${task._id}?status=${task.status}`, {
+        fetch(`https://user-management-server-six.vercel.app/updateStatus/${task._id}?status=${task.status}`, {
             method: "POST"
         })
             .then(res => res.json())
@@ -35,7 +35,7 @@ const AllTasks = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/deleteTask/${id}`, {
+                fetch(`https://user-management-server-six.vercel.app/deleteTask/${id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())
@@ -54,7 +54,7 @@ const AllTasks = () => {
     }
 
     useEffect(() => {
-        fetch(`http://localhost:5000/allTasks`)
+        fetch(`https://user-management-server-six.vercel.app/allTasks`)
             .then(res => res.json())
             .then(data => {
                 setAllTasks(data)
