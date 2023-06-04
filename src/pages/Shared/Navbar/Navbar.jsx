@@ -13,8 +13,8 @@ const Navbar = () => {
     }
     const navOptions = <>
         <li><Link to={"/"}>Home</Link></li>
-        <li><Link to={"/allTask"}>All Tasks</Link></li>
-        <li><Link to={"/addTask"}>Add a Task</Link></li>
+        <li><Link to={"/all-tasks"}>All Tasks</Link></li>
+        <li><Link to={"/add-task"}>Add a Task</Link></li>
         <li><Link to={"/about"}>About Us</Link></li>
     </>
 

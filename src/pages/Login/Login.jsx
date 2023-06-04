@@ -53,7 +53,7 @@ const Login = () => {
                                 <input type="submit" value="Login" className="btn bg-orange-500 border-0 hover:bg-orange-700" />
                             </div>
                         </form>
-                        <p className='text-center'>New to User Management? <Link to="/signup" className="text-orange-500 font-semibold" >Sign Up</Link></p>
+                        <p className='text-center'>New to User Hub? <Link to="/signup" className="text-orange-500 font-semibold" >Sign Up</Link></p>
                         <SocialLogin></SocialLogin>
                     </div>
                 </div>

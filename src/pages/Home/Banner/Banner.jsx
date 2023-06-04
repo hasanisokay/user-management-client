@@ -11,7 +11,7 @@ const Banner = () => {
                 <div className="items-center rounded-xl absolute text-white h-full flex bg-gradient-to-r from-[#151515] to-[rgba(21,21,21,0)]">
                     <div className='space-y-7 w-1/2 pl-12'>
                         <h2 className='text-6xl font-semibold'>Simplify, Centralize, and Optimize</h2>
-                        <p>UserHub - Your Ultimate User Management Solution</p>
+                        <p>UserHub - Your Ultimate Task Management Solution</p>
                         <div>
                             <button className='btn btn-primary mr-5'>
                                 Discover Mode
@@ -53,7 +53,7 @@ const Banner = () => {
                 <div className="items-center rounded-xl absolute text-white h-full flex bg-gradient-to-r from-[#151515] to-[rgba(21,21,21,0)]">
                     <div className='space-y-7 w-10/12 pl-12'>
                         <h2 className='text-6xl font-semibold'>Efficiency meets Ease</h2>
-                        <p>UserHub-Your Gateway to Streamlined User Management</p>
+                        <p>UserHub-Your Gateway to Streamlined Task Management</p>
                         <div>
                             <button className='btn btn-primary mr-5'>
                                 Discover Mode
