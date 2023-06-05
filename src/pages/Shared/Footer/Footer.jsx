@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { FaUsers } from 'react-icons/fa';
 const Footer = () => {
     return (
-        <footer className="footer p-10 bg-base-200 text-base-content">
+        <footer className="footer p-10 bg-stone-600 text-white">
             <div>
             <Link to={"/"} className="h-10 w-20  normal-case text-xl">
                     <FaUsers className='h-full w-full text-orange-500' />
