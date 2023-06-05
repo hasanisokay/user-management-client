@@ -7,7 +7,6 @@ const Navbar = () => {
     const handleLogout = () => {
         logOut()
             .then(() => {
-
             })
             .catch(error => { console.log(error) })
     }
@@ -39,9 +38,13 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link to="/login">
-                    <button className='btn btn-outline text-orange-500  hover:bg-orange-600 hover:border-0'>Login</button>
+                {
+                    user ? 
+                    <button onClick={handleLogout} className='btn btn-outline text-orange-500  hover:bg-orange-600 hover:border-0'>Log Out</button>
+                    : <Link to="/login">
+                <button className='btn btn-outline text-orange-500  hover:bg-orange-600 hover:border-0'>Login</button>
                 </Link>
+                }
             </div>
         </div>
     );

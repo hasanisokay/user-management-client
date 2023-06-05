@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import loginImage from "../../assets/images/login/login.svg"
 import { AuthContext } from '../../Providers/AuthProvider';
 import SocialLogin from '../Shared/SocialLogin/SocialLogin';
+import { Helmet } from 'react-helmet-async';
 
 const SignUp = () => {
     const {createUser} = useContext(AuthContext)
@@ -23,6 +24,9 @@ const SignUp = () => {
     }
     return (
         <div className="hero min-h-screen bg-base-200">
+                   <Helmet>
+                <title>User Hub | Sign Up</title>
+            </Helmet>
         <div className="hero-content flex-col lg:flex-row">
             <div className="mr-12 w-1/2">
                 <img src={loginImage} alt="" />

@@ -1,8 +1,13 @@
 import React, { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 const AllTasks = () => {
+    const [viewFilter,setViewFilter] =useState("")
+    const handleFilter = e=>{
+        setViewFilter(e.target.value);
+    }
     const [allTasks, setAllTasks] = useState([])
     const navigate = useNavigate()
     const handleChangeTask = (task) => {
@@ -52,16 +57,31 @@ const AllTasks = () => {
             }
         })
     }
-
     useEffect(() => {
-        fetch(`https://user-management-server-six.vercel.app/allTasks`)
+        fetch(`https://user-management-server-six.vercel.app/allTasks?filter=${viewFilter}`)
             .then(res => res.json())
             .then(data => {
                 setAllTasks(data)
             })
-    }, [allTasks])
+    }, [allTasks, viewFilter])
+   
     return (
         <div className='w-full bg-gradient-to-r from-lime-200 via-red-200 to-slate-600'>
+            <Helmet>
+                <title>User Hub | All Tasks</title>
+            </Helmet>
+            {
+                <div className="form-control w-[90%] mx-auto max-w-xs ">
+                <label className="label">
+                  <span className="label-text font-semibold">Sort View</span>
+                </label>
+                <select onChange={handleFilter} defaultValue="" className="select select-bordered">
+                  <option></option>
+                  <option>Pending</option>
+                  <option>Done</option>        
+                </select>
+              </div>
+            }
             <div className="py-10 mx-auto w-[99%] lg:overflow-hidden overflow-x-auto" >
                 <table className="table w-full">
                     {/* head */}

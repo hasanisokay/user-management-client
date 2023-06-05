@@ -3,16 +3,17 @@ import Main from "../Layout/Main";
 import Home from "../pages/Home/Home/Home";
 import Login from "../pages/Login/Login";
 import SignUp from "../pages/SignUp/SignUp";
-import PrivateRoute from "./PrivateRoute";
 import About from "../pages/Home/About/About";
 import AllTasks from "../pages/AllTasks/AllTasks";
 import AddTask from "../pages/AddTask/AddTask";
 import UpdateTask from "../pages/UpdateTask/UpdateTask";
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
     {
       path: "/",
       element: <Main></Main>,
+      errorElement: <ErrorPage></ErrorPage> ,
       children:[
         {
           path:"/",

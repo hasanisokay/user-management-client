@@ -1,9 +1,16 @@
 import React from 'react';
 import person from "../../../assets/images/about_us/person.jpg"
 import parts from "../../../assets/images/about_us/parts.jpg"
+import { Helmet } from 'react-helmet-async';
 const About = () => {
+    const path = window.location.pathname;
     return (
         <div className="hero min-h-screen bg-base-200">
+            {
+                path === "/about" && <Helmet>
+                    <title>User Hub | About </title>
+                </Helmet>
+            }
             <div className="hero-content flex-col lg:flex-row">
                 <div className='lg:w-1/2 relative'>
                     <img src={person} className="w-3/4 rounded-lg shadow-2xl" />

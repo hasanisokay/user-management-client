@@ -3,6 +3,7 @@ import loginImage from "../../assets/images/login/login.svg"
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Providers/AuthProvider';
 import SocialLogin from '../Shared/SocialLogin/SocialLogin';
+import { Helmet } from 'react-helmet-async';
 const Login = () => {
     const { signIn } = useContext(AuthContext)
     const location = useLocation()
@@ -26,6 +27,9 @@ const Login = () => {
     }
     return (
         <div className="hero min-h-screen bg-base-200">
+                   <Helmet>
+                <title>User Hub | Login</title>
+            </Helmet>
             <div className="hero-content flex-col lg:flex-row">
                 <div className="mr-12 w-1/2">
                     <img src={loginImage} alt="" />
