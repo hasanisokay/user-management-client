@@ -65,7 +65,7 @@ const Banner = () => {
                         <p className='my-4'>Unleash the Potential with UserHub</p>
                         <div>
                             <button className='btn btn-primary mr-5'>
-                                Discover Mode
+                                Discover More
                             </button>
                             <button className='btn btn-outline btn-secondary'>
                                 Latest Project
@@ -84,7 +84,7 @@ const Banner = () => {
                         <p className='my-4'>UserHub-Your Gateway to Streamlined Task Management</p>
                         <div>
                             <button className='btn btn-primary mr-5'>
-                                Discover Mode
+                                Discover More
                             </button>
                             <button className='btn btn-outline btn-secondary'>
                                 Latest Project
